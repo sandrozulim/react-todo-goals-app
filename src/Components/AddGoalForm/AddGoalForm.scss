@@ -4,7 +4,7 @@
   @include flex(row, center, center, nowrap);
   margin: 0 auto;
   margin-top: 5rem;
-  width: 70%;
+  width: 50%;
   height: 8rem;
   padding: 2rem;
 }
@@ -77,11 +77,18 @@
 
 .icon-rotate {
   background-color: $bg-tertiary;
+  color: $bg-primary;
   animation: rotate 4s linear infinite;
 }
 
 @keyframes rotate {
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .add-goal-container {
+    width: 70%;
   }
 }
