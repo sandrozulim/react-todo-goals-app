@@ -1,0 +1,46 @@
+@import "../../scss/config.scss";
+
+.goal {
+  width: inherit;
+  padding: 1rem;
+  font-size: 1.4rem;
+  background-color: $bg-secondary;
+  transition: all 350ms;
+}
+
+.goal:hover {
+  background-color: $bg-tertiary;
+}
+
+.goal-item {
+  @include flex(row, space-between, center, wrap);
+  word-break: break-all;
+
+  &__content {
+    @include flex(column, center, flex-start, nowrap);
+    gap: 0.2rem;
+  }
+
+  &__control {
+    @include flex(row, flex-start, center, nowrap);
+    gap: 1.2rem;
+    font-size: 1.6rem;
+    color: $bg-secondary;
+
+    &--icon {
+      cursor: pointer;
+      transition: all 350ms;
+    }
+
+    &--icon:hover {
+      color: $bg-primary;
+    }
+  }
+
+  input {
+    all: unset;
+    background-color: $bg-secondary;
+    padding: 0.6rem;
+    border-radius: 16px;
+  }
+}

@@ -1,0 +1,31 @@
+@import "../../scss/config.scss";
+
+.goals {
+  margin: 0 auto;
+  width: 70%;
+  padding: 2rem;
+  position: relative;
+
+  &__sort-btn {
+    border: none;
+    outline: none;
+    background-color: unset;
+    cursor: pointer;
+    position: absolute;
+    @include flex(row, center, center, nowrap);
+    gap: 0.4rem;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: $font-primary;
+  }
+
+  &__list {
+    @include flex(column, center, center, nowrap);
+    list-style: none;
+    padding-left: 0;
+    gap: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+  }
+}
